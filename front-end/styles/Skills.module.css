@@ -1,0 +1,35 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 60%;
+    position: relative;
+    top: 400px;
+    margin: auto;
+    gap: 2rem;
+}
+
+.cards{
+    border: solid 2px transparent;
+    display: flex;
+    background-color: rgb(255, 255, 255, 0.8);
+    padding: 10px 30px;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.description{
+    color: black;
+    margin-left: 13px;
+    user-select: none;
+}
+
+.cards:hover{
+    border: solid 2px rgb(223, 220, 220);
+    box-shadow: rgba(231, 227, 227, 0.35) 0px 5px 15px;
+}
+
+.description:hover{
+    text-shadow: rgba(255, 254, 254, 0.35) 0px 5px 15px;
+}

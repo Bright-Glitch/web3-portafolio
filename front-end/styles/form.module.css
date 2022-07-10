@@ -1,0 +1,119 @@
+.form{
+    width: 29%;
+    min-width: 350px;
+    min-height: 600px;
+    height: 50%;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-top: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255);
+    border: solid 1px black;
+    transition: all 1s;
+    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
+}
+
+@media screen and (max-width:420px){
+    .form{
+        top: 120px;
+    }
+}
+
+@media screen and (max-width:850px){
+    .form{
+        top: 200px;
+    }
+}
+
+.usuario{
+    border: 3px solid #000;
+    border-radius: 5px;
+    height: 50px;
+    margin: 10px auto;
+    line-height: normal;
+    color: #282828;
+    display: block;
+    width: 85%;
+    box-sizing: border-box;
+    user-select: auto;
+    font-size: 16px;
+    padding: 0 6px;
+    padding-left: 12px;
+}
+
+.usuario:focus{
+    border: 3px solid #1e5b6e;
+}
+
+.gmail{
+    border: 3px solid #000;
+    border-radius: 5px;
+    height: 50px;
+    margin: 10px auto;
+    line-height: normal;
+    color: #282828;
+    display: block;
+    width: 85%;
+    box-sizing: border-box;
+    user-select: auto;
+    font-size: 16px;
+    padding: 0 6px;
+    padding-left: 12px;
+}
+
+.gmail:focus{
+    border: 3px solid #1e5b6e;
+}
+
+.message{
+    border: 3px solid #000;
+    border-radius: 5px;
+    height: 250px;
+    margin: 10px auto;
+    line-height: normal;
+    color: #282828;
+    display: block;
+    width: 85%;
+    box-sizing: border-box;
+    user-select: auto;
+    font-size: 16px;
+    padding: 12px;
+    resize: none;
+}
+
+.message:focus{
+    border: 3px solid #1e5b6e;
+}
+
+.h2{
+    margin: calc(5% + 20px);
+    color: #000;
+    font-size: 16px;
+}
+
+.btn{
+    border: solid 2px transparent;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+    background-color: rgb(0, 0, 0);
+    padding: 10px 30px;
+    border-radius: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.33) 0px 5px 15px;
+    width: 7%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn:hover{
+    transition: all 0.3s;
+    border: solid 2px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+}

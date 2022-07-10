@@ -1,0 +1,28 @@
+.code{
+    border: solid 2px transparent;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    top: 500px;
+    background-color: rgb(0, 0, 0);
+    padding: 10px 30px;
+    border-radius: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 7%;
+    color: rgb(255, 255, 255);
+}
+
+.code:hover{
+    transition: all 0.1s;
+    border: solid 2px rgb(223, 220, 220);
+    box-shadow: rgba(231, 227, 227, 0.35) 0px 5px 15px;
+}
+
+@media screen and (max-width:1510px){
+    .code{
+        display: none;
+    }
+}
