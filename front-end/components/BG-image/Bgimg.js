@@ -10,7 +10,7 @@ function Bgimg() {
 
     <Image src={bgimg} layout="fill"
         objectFit="cover"
-        quality={100}  />
+        quality={100} alt="background"  />
         
     </div>
     </>

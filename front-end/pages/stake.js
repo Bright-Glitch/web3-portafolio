@@ -12,7 +12,7 @@ import Staking from '../components/staking/Staking'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { toast, Toaster } from 'react-hot-toast'
 
-function stake() {
+function Stake() {
 
   const { isConnected, isAuthorized, authCall } = useContext(DappContext);
 
@@ -21,7 +21,7 @@ function stake() {
     if(isConnected){
       authCall()
     }
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const copy = (
@@ -52,7 +52,7 @@ function stake() {
       <div className={ isAuthorized ? styles.card: styles.cardStart }>
                  
         <div className={isAuthorized ? styles.coinNone  : styles.coin } >
-          <Image src={coin} height={160} width={160} quality={100} />
+          <Image src={coin} height={160} width={160} quality={100} alt="coin" />
         </div>
 
         { isConnected ? (<Authorization/>) : (<Connect/>) }
@@ -72,4 +72,4 @@ function stake() {
   )
 }
 
-export default stake
+export default Stake

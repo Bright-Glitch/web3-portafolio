@@ -17,7 +17,7 @@ function Mint() {
 
   <div className={styles.info} data-tip data-for='infoTooltop' >
 
-    <Image src={info} height={27} width={27} quality={100} />
+    <Image src={info} height={27} width={27} quality={100} alt="info-icon" />
 
     <ReactTooltip id='infoTooltop'place='right' type='info' effect='solid' className={styles.toolTip} >
       Token Name: Future <br />
@@ -37,7 +37,7 @@ function Mint() {
         <div className={styles.container} >
           
           <div className={styles.coin} >
-          <Image src={coin} height={160} width={160} quality={100}  />
+          <Image src={coin} alt="Token" height={160} width={160} quality={100}  />
           </div>
 
           <div className={styles.btnContainer} >

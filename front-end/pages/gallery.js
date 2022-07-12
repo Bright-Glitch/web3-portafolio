@@ -7,7 +7,7 @@ import styles from '../styles/gallery.module.css'
 import ContractGallery from '../components/ContractGallery'
 import { TailSpin } from  'react-loader-spinner'
 
-function gallery() {
+function Gallery() {
 
   const { callGallery, imageURI } = useContext(DappContext);
 
@@ -18,7 +18,7 @@ function gallery() {
     callGallery(1);
 
     callGallery(2);
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 
   const imageMapping = (
@@ -26,7 +26,7 @@ function gallery() {
     <div key={index} className={styles.imagesContainer} >
 
     <div className={styles.images} >
-        { imageURI[index] ? <Image className={styles.image} src={item} layout='fill' quality={100}  /> : ( <TailSpin color="#6495ED" height={110} width={110} /> ) }
+        { imageURI[index] ? <Image className={styles.image} alt="NFT Image" src={item} layout='fill' quality={100}  /> : ( <TailSpin color="#6495ED" height={110} width={110} /> ) }
     </div>
 
     </div>
@@ -35,7 +35,7 @@ function gallery() {
   return (
     <>
     <Head>
-      <title>Web3 | NFT's</title>
+      <title>Web3 | NFT&apos;s</title>
     </Head>
 
     <div className={styles.container} >
@@ -49,4 +49,4 @@ function gallery() {
   )
 }
 
-export default gallery
+export default Gallery

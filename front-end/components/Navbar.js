@@ -12,7 +12,7 @@ const handleClick = () => setClick(!click);
   return (
     <div className={ click ? "nav-container" : "nav-container nav-container-active" }>
 
-      <a href='https://github.com/Bright-Glitch/web3-portafolio' target="_blank"><Image src="/web3-icon-7.png" width={50} height={50} className="nav-logo" /></a>
+      <a href='https://github.com/Bright-Glitch/web3-portafolio' target="_blank" rel="noreferrer" ><Image src="/web3-icon-7.png" width={50} height={50} alt="web3" className="nav-logo" /></a>
 
       <ul className={ click ? "nav-list" : "nav-list-active" }>
         <li><Link href="/"><a onClick={handleClick} >Home</a></Link></li>

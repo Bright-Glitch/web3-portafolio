@@ -7,7 +7,7 @@ import { TailSpin } from  'react-loader-spinner'
 
 function Withdraw() {
 
-  const { stakingCall, staked, futureCall, FTbalance, isConnected } = useContext(DappContext);
+  const { stakingCall, staked, futureCall, isConnected } = useContext(DappContext);
 
   const stakingAddress = '0x6D278724fC4d2580f9f68f074304d52B5e33aCB3'
 
@@ -20,7 +20,7 @@ function Withdraw() {
       stakingCall()
       futureCall()
     }
-    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   
  

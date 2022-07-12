@@ -5,7 +5,7 @@ import Image from 'next/image'
 import right from '../../public/right.png'
 import left from '../../public/left.png'
 
-function number() {
+function Number() {
     
     const { number, setNumber } = useContext(DappContext);
 
@@ -22,7 +22,7 @@ function number() {
     <div className={styles.counter} >
 
       <button className={styles.arrows} onClick={handleDec} >
-        <Image src={left} height={37} width={37} quality={100}  />
+        <Image src={left} height={37} width={37} quality={100} alt="arrow"  />
       </button>
 
       <div className={styles.numbers} >
@@ -30,11 +30,11 @@ function number() {
       </div>
 
       <button className={styles.arrows} onClick={handleInc} >
-        <Image src={right} height={37} width={37} quality={100}  />
+        <Image src={right} height={37} width={37} quality={100} alt="arrow"  />
       </button>
       
     </div> 
   )
 }
 
-export default number
+export default Number

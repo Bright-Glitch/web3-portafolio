@@ -7,7 +7,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { toast, Toaster } from 'react-hot-toast'
 import BgSecond from '../components/BG-image/BgSecond'
 
-function token() {
+function Token() {
   
   const { isConnected } = useContext(DappContext);
   
@@ -40,4 +40,4 @@ function token() {
   )
 }
 
-export default token
+export default Token

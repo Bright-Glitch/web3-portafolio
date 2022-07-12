@@ -3,7 +3,7 @@ import React from 'react'
 import BgSecond from '../components/BG-image/BgSecond'
 import Form from '../components/form'
 
-function contact() {
+function Contact() {
   return (
     <>
     <Head>
@@ -15,4 +15,4 @@ function contact() {
   )
 }
 
-export default contact
+export default Contact

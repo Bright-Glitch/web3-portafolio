@@ -19,7 +19,7 @@ function Skillcards() {
         {
             icons.map( (item, index)=> 
             <div key={index} className={styles.cards} >
-                <Image src={item} width={40} height={40} quality={100} />
+                <Image src={item} alt="icon" width={40} height={40} quality={100} />
                 <p className={styles.description} > { nombres[index] } </p>
             </div> )
         }

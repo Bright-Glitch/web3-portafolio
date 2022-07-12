@@ -1,4 +1,4 @@
-import {React, useContext, useEffect, useState } from 'react'
+import {React, useContext } from 'react'
 import { DappContext } from '../../context/DappContext'
 import styles from '../../styles/stake.module.css'
 import StakingJ from '../../abi/StakingFT.json'
