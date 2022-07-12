@@ -7,9 +7,11 @@ function Bgimg() {
   return (
     <>
     <div className={styles.container}>
+
     <Image src={bgimg} layout="fill"
         objectFit="cover"
         quality={100}  />
+        
     </div>
     </>
   )

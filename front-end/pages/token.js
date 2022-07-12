@@ -12,6 +12,7 @@ function token() {
   const { isConnected } = useContext(DappContext);
   
   const info = (<p className={styles.p} >Chain: Goerli</p>)
+  
   const copy = (
   <CopyToClipboard text='0x1fe84fE4e1ae96F9b202188f7a6835dB3D27a264' >
     <button className={styles.copy} onClick={ ()=> toast.success("Address Copied!", { style: { fontSize : '12px' } } )  } >Token Address</button>
@@ -23,8 +24,11 @@ function token() {
     <Head>
       <title>Web3 | Token</title>
     </Head>
+
     <h1 className={styles.h1} >Mint your Future</h1>
+
     <Mint/>
+
     { isConnected ? info : null}
 
     { isConnected ? copy : null}

@@ -1,0 +1,337 @@
+.container{
+    display: grid;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    min-height: 795px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content:space-around;
+    align-items: end;
+}
+
+.h1{
+    text-align: center;
+    top: 120px;
+    -webkit-background-clip: text;
+	background-clip: text;
+	background-image: url('../public/iron-bg.jpg');
+    background-position: center;
+	color: transparent;
+    position: relative;
+    font-size: 70px;
+    text-shadow: 1px 1px 0.5 white;
+}
+
+@media screen and (max-width:1100px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+        justify-content:center;
+        align-items: center;
+        position: relative;
+        top: 120px;
+    }
+
+    .h1{
+        font-size: 50px;
+        color: rgb(255, 255, 255,0.3);
+        top: 100px;
+    }
+}
+
+@media screen and (max-width:360px){
+    .h1{
+        font-size: 45px;
+    }
+}
+
+.card{
+    width: 300px;
+    height: 400px;
+    margin-bottom: 80px;
+    position: relative;
+    justify-self: center;
+    text-align: center;
+    border-radius: 30px;
+    background-color: #fdfeff;
+    border: solid 1.3px black;
+    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
+    animation-name: visible;
+    animation-duration: 2s;
+
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    justify-content: center;
+    align-items: center;
+
+    transition: hover 0.5s;
+}
+
+@keyframes visible {
+    from{ opacity: 0; }
+    to{ opacity: 1;}
+}
+
+.cardStart{
+    width: 1%;
+    min-width: 270px;
+    min-height: 270px;
+    height: 25%;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #fdfeff;
+    border: solid 1.3px black;
+    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
+}
+
+.cardNone{
+    display: none;
+}
+
+.coin{
+    margin-top: 10px;
+}
+
+.coinNone{
+    display: none;
+}
+
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btnAuth{
+    border: solid 2px transparent;
+    position: relative;
+    z-index: 5;
+    margin: 11px auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    
+    background-color: #000000;
+    padding: 10px 50px;
+    border-radius: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 7%;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s;
+}
+
+.btnAuth:hover{
+    transition: all 0.2s;
+    border: solid 2px #000000;
+    color: #000000;
+    font-size: 13px;
+    background-color: transparent;
+}
+
+.btnStake{
+    border: solid 2px transparent;
+    position: relative;
+    z-index: 5;
+    margin: 11px auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    
+    background-color: #339DFF;
+    padding: 10px 50px;
+    border-radius: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 7%;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s;
+}
+
+.btnStake:hover{
+    transition: all 0.2s;
+    border: solid 2px #339DFF;
+    color: #339DFF;
+    font-size: 13px;
+    background-color: transparent;
+}
+
+.btnReward{
+    border: solid 2px transparent;
+    position: relative;
+    z-index: 5;
+    margin: 11px auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    
+    background-color: rgb(0,0,0);
+    padding: 10px 50px;
+    border-radius: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 7%;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s;
+}
+
+.btnReward:hover{
+    transition: all 0.2s;
+    border: solid 2px rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    background-color: transparent;
+}
+
+.btnWithdraw{
+    border: solid 2px transparent;
+    position: relative;
+    z-index: 5;
+    margin: 11px auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    
+    background-color: rgb(197, 28, 28);
+    padding: 10px 50px;
+    border-radius: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 7%;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s;
+}
+
+.btnWithdraw:hover{
+    transition: all 0.2s;
+    border: solid 2px rgb(197, 28, 28);
+    color: rgb(197, 28, 28);;
+    font-size: 13px;
+    background-color: transparent;
+}
+
+.title{
+    font-size: 23px;
+}
+
+.number{
+    font-size: 23px;    
+}
+
+.card:hover{
+    transition: all 0.5s;
+    color: white;
+    background-color: transparent;
+    border: solid 1.3px white;
+}
+
+.amount{
+    background-color: transparent;
+    border: 3px solid #000;
+    border-radius: 5px;
+    height: 50px;
+    margin: 10px auto;
+    line-height: normal;
+    color: rgb(3, 3, 3);
+    display: block;
+    width: 85%;
+    box-sizing: border-box;
+    user-select: auto;
+    font-size: 16px;
+    padding: 0 6px;
+    padding-left: 12px;
+}
+
+.card:hover .amount{
+    color: white;
+    border: 3px solid white;
+    box-shadow: 0 0 5px #5a5f6480;
+    transition: all 0.5s;
+}
+
+.amount:focus{
+    outline: none !important;
+    border: 3px solid white;
+    box-shadow: 0 0 5px #5a5f6480;
+}
+
+.errorMsg{
+    font-size: 11px;
+    color: rgb(255, 0, 0);
+}
+
+.errorMsgNone{
+    opacity: 0;
+}
+
+.copy{
+    border: solid 2px transparent;
+    position: absolute;
+    z-index: 5;
+    margin: 20px auto;
+    right: 0;
+    left: 0;
+    margin-top: 0;
+    top: 880px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    
+    background-color: rgb(0, 0, 0);
+    padding: 10px 40px;
+    border-radius: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    min-width: 12%;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s;
+    animation-name: visible;
+    animation-duration: 1s;
+    border: dashed 1px rgb(255, 255, 255);
+
+    animation-name: visible;
+    animation-duration: 2s;
+}
+
+
+.copy:hover{
+    border: solid 1px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
+.description{
+    font-size: 20px;
+    text-align: center;
+    top: 330px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px;
+    user-select: all;
+}
+
+@media screen and (max-width:1100px){
+
+    .copy{
+        display: none;
+    }
+
+    .description{
+        display: none;
+    }
+}
+

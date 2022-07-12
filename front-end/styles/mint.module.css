@@ -162,8 +162,6 @@
     justify-content: center;
     animation-name: visible;
     animation-duration: 3s;
-    
-    
 }
 
 @keyframes visible {

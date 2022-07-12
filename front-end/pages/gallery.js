@@ -24,21 +24,26 @@ function gallery() {
   const imageMapping = (
     imageURI.map( (item, index)=>
     <div key={index} className={styles.imagesContainer} >
+
     <div className={styles.images} >
         { imageURI[index] ? <Image className={styles.image} src={item} layout='fill' quality={100}  /> : ( <TailSpin color="#6495ED" height={110} width={110} /> ) }
     </div>
-  </div>
-      ))
+
+    </div>
+  ))
 
   return (
     <>
     <Head>
       <title>Web3 | NFT's</title>
     </Head>
-      <div className={styles.container} >
+
+    <div className={styles.container} >
       { imageMapping }
-      </div>
-      <ContractGallery/>
+    </div>
+
+    <ContractGallery/>
+
     <Bgimg/>
     </>
   )

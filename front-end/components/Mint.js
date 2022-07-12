@@ -14,15 +14,20 @@ function Mint() {
   const { isConnected } = useContext(DappContext);
 
   const information = (
+
   <div className={styles.info} data-tip data-for='infoTooltop' >
+
     <Image src={info} height={27} width={27} quality={100} />
+
     <ReactTooltip id='infoTooltop'place='right' type='info' effect='solid' className={styles.toolTip} >
-    Token Name: Future <br />
-    Mint: Only 15 Token per Address <br />
-    Burn: Unlimited <br />
-    Max. Supply: 700,000
+      Token Name: Future <br />
+      Mint: Only 15 Token per Address <br />
+      Burn: Unlimited <br />
+      Max. Supply: 700,000
     </ReactTooltip>
+
   </div>
+  
   )
 
   return (

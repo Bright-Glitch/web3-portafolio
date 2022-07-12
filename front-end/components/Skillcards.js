@@ -23,7 +23,6 @@ function Skillcards() {
                 <p className={styles.description} > { nombres[index] } </p>
             </div> )
         }
-         
     </div>
   )
 }

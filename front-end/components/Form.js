@@ -20,17 +20,22 @@ const Form = () => {
 
   return (
     <div>
-             <form className={styles.form} ref={form} onSubmit={sendEmail} >
-                <label htmlFor="usuario" className={styles.h2} >Name:</label>
-                <input placeholder="Name..." className={styles.usuario} name="usuario" type="text"></input>
-                <label htmlFor="email" className={styles.h2} >E-mail:</label>
-                <input placeholder="E-mail..." className={styles.gmail} name="email" type="email"></input>
-                <label htmlFor="message" className={styles.h2} >Message:</label>
-                <textarea placeholder="Write your message..." className={styles.message} name="message" ></textarea>
-                <button type="submit" className={styles.btn} >
-                    Send
-                </button>
-            </form>
+     <form className={styles.form} ref={form} onSubmit={sendEmail} >
+
+        <label htmlFor="usuario" className={styles.h2} >Name:</label>
+        <input placeholder="Name..." className={styles.usuario} name="usuario" type="text"></input>
+
+        <label htmlFor="email" className={styles.h2} >E-mail:</label>
+        <input placeholder="E-mail..." className={styles.gmail} name="email" type="email"></input>
+
+        <label htmlFor="message" className={styles.h2} >Message:</label>
+        <textarea placeholder="Write your message..." className={styles.message} name="message" ></textarea>
+
+        <button type="submit" className={styles.btn} >
+            Send
+        </button>
+        
+      </form>
     </div>       
   )
 }
