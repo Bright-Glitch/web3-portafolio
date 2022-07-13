@@ -5,7 +5,7 @@ import Image from 'next/image'
 import coin from '../public/coin-img.png'
 import Buttons from './Mint/Buttons'
 import Connect from './Connect'
-import Number from './mint/Number'
+import Number from './Mint/Number'
 import info from '../public/info-1.png'
 import ReactTooltip from 'react-tooltip'
 

@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import web3 from '../public/Web3-Icon-7.png'
 
 function Navbar() {
 
@@ -12,7 +13,7 @@ const handleClick = () => setClick(!click);
   return (
     <div className={ click ? "nav-container" : "nav-container nav-container-active" }>
 
-      <a href='https://github.com/Bright-Glitch/web3-portafolio' target="_blank" rel="noreferrer" ><Image src="/web3-icon-7.png" width={50} height={50} alt="web3" className="nav-logo" /></a>
+      <a href='https://github.com/Bright-Glitch/web3-portafolio' target="_blank" rel="noreferrer" ><Image src={web3} width={50} height={50} alt="web3" className="nav-logo" /></a>
 
       <ul className={ click ? "nav-list" : "nav-list-active" }>
         <li><Link href="/"><a onClick={handleClick} >Home</a></Link></li>
