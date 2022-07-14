@@ -29,7 +29,7 @@
         justify-content:center;
         align-items: center;
         position: relative;
-        top: 120px;
+        top: 110px;
     }
 
     .h1{
@@ -37,6 +37,14 @@
         color: rgb(255, 255, 255,0.3);
         top: 100px;
     }
+}
+
+@media screen and (max-width:450px){
+
+    .container{
+        top: 50px;
+    }
+
 }
 
 @media screen and (max-width:360px){
@@ -88,6 +96,12 @@
     background-color: #fdfeff;
     border: solid 1.3px black;
     box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
+}
+
+@media screen and (max-width:420px){
+    .cardStart{
+        top: 80px;
+    }
 }
 
 .cardNone{
@@ -332,6 +346,10 @@
 
     .description{
         display: none;
+    }
+
+    .cardStart{
+        top: 160px;
     }
 }
 

@@ -1,6 +1,4 @@
 import {React, createContext, useState} from 'react'
-import axios from 'axios'
-import PhotoJ from '../abi/PhotoArt.json'
 import { ethers } from 'ethers'
 import StakingJ from '../abi/StakingFT.json'
 import FutureJ from '../abi/Future.json'
@@ -19,48 +17,7 @@ const [number, setNumber] = useState(1);
 
 const [provider, setProvider] = useState({});
 
-// NFT Gallery:
 
-var baseURI = 'https://gateway.pinata.cloud/ipfs/';
-
-const PhotoArtAddress = "0xD0E2124F296e3967532D5340e91474733C6dBE2a"
-
-const [imageURI0, setImageURI0] = useState('')
-const [imageURI1, setImageURI1] = useState('')
-const [imageURI2, setImageURI2] = useState('')
-
-const imageURI = [imageURI0, imageURI1, imageURI2];
-const setImageURI = [setImageURI0, setImageURI1, setImageURI2];
-
-async function callGallery(id){
-
-  const _provider = new ethers.providers.Web3Provider(window.ethereum)
-
-  const photoArtContract = new ethers.Contract(PhotoArtAddress, PhotoJ.abi, _provider)
-
-  const metaData = await photoArtContract.tokenURI(id);
-
-  const metaDataURI =  metaData.replace("ipfs://",baseURI);
-
-  axios.get(metaDataURI)
-  .then(function (response) {
-
-    setImageURI[id](response.data.image.replace("ipfs://",baseURI));
-
-  })
-  .catch(function (error) {
-
-    setTimeout(function(){
-
-      window.location.reload();
-
-    },100); 
-    
-    console.log(error);
-
-  })
-  
-}
 
 // For Authorization for Staking:
 
@@ -161,6 +118,6 @@ async function futureCall(){
 } 
 
   return (
-    <DappContext.Provider value={ {authCall, FTbalance, futureCall, stakingCall, staked, reward, totalSupply, isReady, setIsReady ,isAuthorized, setIsAuthorized, isConnected, setIsConnected, account, setAccount, number, setNumber, signer, setSigner, provider, setProvider, callGallery, imageURI } } > { children } </DappContext.Provider>
+    <DappContext.Provider value={ {authCall, FTbalance, futureCall, stakingCall, staked, reward, totalSupply, isReady, setIsReady ,isAuthorized, setIsAuthorized, isConnected, setIsConnected, account, setAccount, number, setNumber, signer, setSigner, provider, setProvider } } > { children } </DappContext.Provider>
   )
 }

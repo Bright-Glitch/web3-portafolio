@@ -127,7 +127,7 @@ a:hover:after{
       right: 0;
       top: 60px;
       z-index: 1;
-      background-color: rgb(221, 220, 220);
+      background-color: rgb(255, 255, 255);
       transition: all 0.5s;
   }
 
@@ -173,6 +173,10 @@ a:hover:after{
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
     stroke-width: 6;
+  }
+
+  li{
+    margin-left: 0;
   }
   
 }

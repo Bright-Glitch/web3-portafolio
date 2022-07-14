@@ -22,13 +22,13 @@
   }
 
 @media screen and (max-width:1100px){
-    .container{
-        width: 70%;
-        margin: auto;
-    }
 
     .h1{
         font-size: 50px;
+    }
+
+    .p{
+        margin: 20px;
     }
 }
 

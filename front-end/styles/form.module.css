@@ -17,15 +17,15 @@
     box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
 }
 
-@media screen and (max-width:420px){
-    .form{
-        top: 120px;
-    }
-}
-
 @media screen and (max-width:850px){
     .form{
         top: 200px;
+    }
+}
+
+@media screen and (max-width:420px){
+    .form{
+        top: 150px;
     }
 }
 
