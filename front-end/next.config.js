@@ -1,12 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: false,
-}
-
-module.exports = nextConfig
 
 module.exports = {
+    reactStrictMode: false,
   images: {
     domains: ["gateway.pinata.cloud"],
   },
+  devIndicators: {
+        buildActivity: false
+    }
 }
