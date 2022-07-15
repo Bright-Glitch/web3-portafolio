@@ -1,6 +1,8 @@
 import {React, useRef} from 'react'
 import styles from '../styles/form.module.css'
 import emailjs from '@emailjs/browser'
+import Image from 'next/image'
+import linkedin from '../public/linkedin-icon.png'
 
 const Form = () => {
     const form = useRef();
@@ -34,6 +36,11 @@ const Form = () => {
         <button type="submit" className={styles.btn} >
             Send
         </button>
+
+        
+      <div className={styles.linkedin} >
+      <a href='https://www.linkedin.com/in/brian-galdo/' target="_blank" rel="noreferrer" ><Image src={linkedin} width={40} height={40} alt="linkedin" /></a>
+      </div>
         
       </form>
     </div>       

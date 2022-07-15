@@ -12,6 +12,8 @@ function Gallery() {
   const [imageURI0, setImageURI0] = useState('')
   const [imageURI1, setImageURI1] = useState('')
   const [imageURI2, setImageURI2] = useState('')
+
+  const [isLoaded, setIsLoaded] = useState([])
   
   const imageURI = [imageURI0, imageURI1, imageURI2];
   const setImageURI = [setImageURI0, setImageURI1, setImageURI2];
@@ -47,7 +49,7 @@ function Gallery() {
 
           media = nfts[index].media[0].raw
 
-          setImageURI[index](media.replace("ipfs://",baseURI)) 
+          setImageURI[index](media.replace("ipfs://","")) 
         })
         .catch((error) => {
           console.log(error)
@@ -57,6 +59,7 @@ function Gallery() {
       } )
 
     )  
+    
 
   }
   
@@ -65,11 +68,15 @@ function Gallery() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 
+  const myLoader = ({ src, width, quality }) => {
+    return `https://gateway.pinata.cloud/ipfs/${src}?w=${width}&q=${quality || 75}`
+  }
+
   const imageMapping = (
     imageURI.map( (item, index)=>
     <div key={index} className={styles.imagesContainer} >
     <div className={styles.images} >
-        { imageURI[index] ? <Image className={styles.image} alt="NFT Image" src={item} layout='fill' quality={100}  /> : ( <TailSpin color="#6495ED" height={110} width={110} /> ) }
+        { imageURI[index] ? <Image className={styles.image} alt="NFT Image" src={item} loader={myLoader} layout='fill' quality={100}  /> : ( <TailSpin color="#6495ED" height={110} width={110} /> ) }
     </div>
 
     </div>
