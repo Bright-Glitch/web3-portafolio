@@ -76,7 +76,7 @@ function Gallery() {
     imageURI.map( (item, index)=>
     <div key={index} className={styles.imagesContainer} >
     <div className={styles.images} >
-        { imageURI[index] ? <Image className={styles.image} alt="NFT Image" src={item} loader={myLoader} layout='fill' quality={100}  /> : ( <TailSpin color="#6495ED" height={110} width={110} /> ) }
+        { imageURI[index] ? <Image className={styles.image} alt="Please, reload the page" src={item} loader={myLoader} layout='fill' quality={100}  /> : ( <TailSpin color="#6495ED" height={110} width={110} /> ) }
     </div>
 
     </div>

@@ -61,7 +61,9 @@
     justify-self: center;
     text-align: center;
     border-radius: 30px;
-    background-color: #fdfeff;
+    background-image: url('../public/tech2.jpg');
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
     border: solid 1.3px black;
     box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
     animation-name: visible;
@@ -93,7 +95,9 @@
     margin: auto;
     border-radius: 30px;
     overflow: hidden;
-    background-color: #fdfeff;
+    background-image: url('../public/tech2.jpg');
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
     border: solid 1.3px black;
     box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
 }
@@ -244,6 +248,7 @@
 }
 
 .card:hover{
+    background-image: none;
     transition: all 0.5s;
     color: white;
     background-color: transparent;

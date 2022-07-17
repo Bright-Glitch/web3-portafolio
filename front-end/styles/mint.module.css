@@ -39,7 +39,9 @@
     margin: auto;
     border-radius: 30px;
     overflow: hidden;
-    background-color: rgba(255, 255, 255);
+    background-image: url('../public/tech2.jpg');
+    background-repeat: no-repeat;
+    background-size: 700px 700px;
     border: solid 1.3px black;
     transition: all 1s;
     box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
@@ -58,7 +60,9 @@
     margin: auto;
     border-radius: 30px;
     overflow: hidden;
-    background-color: rgba(255, 255, 255);
+    background-image: url('../public/tech2.jpg');
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
     border: solid 1.3px black;
     box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
 }
