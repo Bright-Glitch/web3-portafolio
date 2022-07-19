@@ -19,9 +19,14 @@ function GetReward() {
   
     const stakingContract = new ethers.Contract(stakingAddress, StakingJ.abi, signer_)
 
-    await stakingContract.getReward();
+    const response = await stakingContract.getReward();
 
     stakingCall()
+
+    _provider.once(response.hash, (transaction) => {
+      console.log("Hash emited", transaction)
+      stakingCall()
+    })
   
   } 
 

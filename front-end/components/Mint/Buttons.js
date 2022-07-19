@@ -31,6 +31,16 @@ const BigNumber = ethers.utils.parseEther(`${number}.0`);
 async function handleMint(){
   const _provider = new ethers.providers.Web3Provider(window.ethereum)
 
+  // const filter = {
+  //   address: "0x1fe84fE4e1ae96F9b202188f7a6835dB3D27a264",
+  //   topics: [
+  //       ethers.utils.id("mint(address,uint256)")
+  //   ]
+  // }
+  // _provider.on(filter, (log, event) => {
+  //   console.log("mint function:", log, event)
+  // })
+
   const signer_ = _provider.getSigner();
 
   const futureContract = new ethers.Contract(ContractAddress, FutureJ.abi, signer_)
@@ -38,6 +48,11 @@ async function handleMint(){
   const response = await futureContract.mint(account, BigNumber);
 
   console.log(response)
+
+  _provider.once(response.hash, (transaction) => {
+    console.log("Hash emited", transaction)
+  })
+
 }
 
 async function handleBurn(){

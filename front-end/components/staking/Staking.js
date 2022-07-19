@@ -28,9 +28,14 @@ function Staking() {
 
       const AmountBN = ethers.utils.parseEther(`${amount}`)
 
-      await stakingContract.stake(AmountBN);
+      const response = await stakingContract.stake(AmountBN);
 
       stakingCall()
+
+      _provider.once(response.hash, (transaction) => {
+        console.log("Hash emited", transaction)
+        stakingCall()
+      })
 
       setAmount('')
 

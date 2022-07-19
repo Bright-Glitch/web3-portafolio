@@ -3,6 +3,7 @@ import { DappContext } from '../context/DappContext'
 import styles from '../styles/Connect.module.css'
 import { ethers } from 'ethers'
 import FutureJ from '../abi/Future.json'
+import detectEthereumProvider from '@metamask/detect-provider';
 
 function Connect() {
 
@@ -14,10 +15,12 @@ function Connect() {
 
   async function handleClick(){
 
-    if(window.ethereum){
+    const provider = await detectEthereumProvider();
+
+    if(provider==window.ethereum){
         
       const newProvider = new ethers.providers.Web3Provider(window.ethereum)
-        
+       
       await window.ethereum.request({
           method: 'wallet_switchEthereumChain',
           params: [{ chainId: '0x5' }],

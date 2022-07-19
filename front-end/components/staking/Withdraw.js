@@ -42,7 +42,12 @@ function Withdraw() {
 
       const AmountBN = ethers.utils.parseEther(`${amount}`)
 
-      await stakingContract.withdraw(AmountBN);
+      const response = await stakingContract.withdraw(AmountBN);
+
+      _provider.once(response.hash, (transaction) => {
+        console.log("Hash emited", transaction)
+        stakingCall()
+      })
 
       setAmount('')
 

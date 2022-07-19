@@ -37,11 +37,14 @@ module.exports = {
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _context_DappContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1793);
-/* harmony import */ var _styles_Connect_module_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(3357);
-/* harmony import */ var _styles_Connect_module_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_styles_Connect_module_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _styles_Connect_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(3357);
+/* harmony import */ var _styles_Connect_module_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_styles_Connect_module_css__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1982);
 /* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(ethers__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _abi_Future_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7428);
+/* harmony import */ var _metamask_detect_provider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(3427);
+/* harmony import */ var _metamask_detect_provider__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_metamask_detect_provider__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -53,7 +56,8 @@ function Connect() {
     const FutureAddress = "0x1fe84fE4e1ae96F9b202188f7a6835dB3D27a264";
     const stakingAddress = "0x6D278724fC4d2580f9f68f074304d52B5e33aCB3";
     async function handleClick() {
-        if (window.ethereum) {
+        const provider = await _metamask_detect_provider__WEBPACK_IMPORTED_MODULE_5___default()();
+        if (provider == window.ethereum) {
             const newProvider = new ethers__WEBPACK_IMPORTED_MODULE_3__.ethers.providers.Web3Provider(window.ethereum);
             await window.ethereum.request({
                 method: "wallet_switchEthereumChain",
@@ -86,9 +90,9 @@ function Connect() {
         }
     }
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-        className: (_styles_Connect_module_css__WEBPACK_IMPORTED_MODULE_5___default().btnContainer),
+        className: (_styles_Connect_module_css__WEBPACK_IMPORTED_MODULE_6___default().btnContainer),
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
-            className: (_styles_Connect_module_css__WEBPACK_IMPORTED_MODULE_5___default().btn1),
+            className: (_styles_Connect_module_css__WEBPACK_IMPORTED_MODULE_6___default().btn1),
             onClick: handleClick,
             children: "CONNECT"
         })
